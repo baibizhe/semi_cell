@@ -1,9 +1,9 @@
 ## Environments and Requirements
 
-- Windows/Ubuntu version
-- CPU, RAM, GPU information
-- CUDA version
-- python version
+- Windows/Ubuntu both works
+- gpu memory>= 8GB required
+- CUDA version testted on 11.1
+- python=3.8
 
 To install requirements:
 
