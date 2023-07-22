@@ -18,15 +18,15 @@ pip install -r requirements.txt
 - A link to download the data (if publicly available)
 - A description of how to prepare the data (e.g., folder structures) 
 
-## Preprocessing TODO to fit 
+## Preprocessing
 
-A brief description of the preprocessing method
+
 
 
 Running the data preprocessing code:
 
 ```python
-python preprocessing.py --input_imgs_path <path_to_input_data> --input_masks_path <path_to_input_data> --output_path <path_to_output_data>
+python create_annotation_for_yolo.py --input_imgs_path <path_to_input_data> --input_masks_path <path_to_input_data> --output_path <path_to_output_data>
 ```
 Then organize your data dir as follows to fit the training yaml:
 data
