@@ -11,22 +11,19 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
->Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
 
-
-
-## Dataset
+## Dataset TODO
 
 - A link to download the data (if publicly available)
-- A description of how to prepare the data (e.g., folder structures)
+- A description of how to prepare the data (e.g., folder structures) 
 
-## Preprocessing
+## Preprocessing TODO
 
 A brief description of the preprocessing method
 
 - cropping
 - intensity normalization
-- resampling
+- resampling  
 
 Running the data preprocessing code:
 
