@@ -17,18 +17,15 @@ pip install -r requirements.txt
 - A link to download the data (if publicly available)
 - A description of how to prepare the data (e.g., folder structures) 
 
-## Preprocessing TODO to fit ../fold_1.yaml
+## Preprocessing TODO to fit 
 
 A brief description of the preprocessing method
 
-- cropping
-- intensity normalization
-- resampling  
 
 Running the data preprocessing code:
 
 ```python
-python preprocessing.py --input_path <path_to_input_data> --output_path <path_to_output_data>
+python preprocessing.py --input_imgs_path <path_to_input_data> --input_masks_path <path_to_input_data> --output_path <path_to_output_data>
 ```
 
 ## Training
