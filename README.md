@@ -17,7 +17,7 @@ pip install -r requirements.txt
 - A link to download the data (if publicly available)
 - A description of how to prepare the data (e.g., folder structures) 
 
-## Preprocessing TODO
+## Preprocessing TODO to fit ../fold_1.yaml
 
 A brief description of the preprocessing method
 
@@ -36,16 +36,12 @@ python preprocessing.py --input_path <path_to_input_data> --output_path <path_to
 1. To train the model(s) in the paper, run this command:
 
 ```bash
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+python train.py --img 1280 --batch 8 --epochs 50 --data ../fold_1.yaml --weights yolov5s6.pt --multi-scale --seed 42 --name fold_1
 ```
 
->Describe how to train the models, with example commands, including the full training procedure and appropriate hyper-parameters.
+You can download trained models here:  TODO
 
-You can download trained models here:
 
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on the above dataset with the above code. 
-
->Give a link to where/how the trained models can be downloaded.
 
 
 2. To fine-tune the model on a customized dataset, run this command:
@@ -54,7 +50,7 @@ You can download trained models here:
 python finetune.py --input-data <path_to_data> --pre_trained_model_path <path to pre-trained model> --other_flags
 ```
 
-3. [Colab](https://colab.research.google.com/) jupyter notebook
+
 
 
 ## Inference
