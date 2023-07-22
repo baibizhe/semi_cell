@@ -12,6 +12,7 @@ pip install -r requirements.txt
 ```
 
 
+
 ## Dataset TODO
 
 - A link to download the data (if publicly available)
@@ -27,13 +28,21 @@ Running the data preprocessing code:
 ```python
 python preprocessing.py --input_imgs_path <path_to_input_data> --input_masks_path <path_to_input_data> --output_path <path_to_output_data>
 ```
+Then organize your data dir as follows to fit the training yaml:
+data
+--images
+----train
+----val
+--labels
+----train
+----val
 
 ## Training
 
 1. To train the model(s) in the paper, run this command:
 
 ```bash
-python train.py --img 1280 --batch 8 --epochs 50 --data ../fold_1.yaml --weights yolov5s6.pt --multi-scale --seed 42 --name fold_1
+python train.py --img 1280 --batch 8 --epochs 50 --data ./cell.yaml --weights yolov5s6.pt --multi-scale --seed 42 --name fold_1
 ```
 
 You can download trained models here:  TODO
