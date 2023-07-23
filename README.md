@@ -30,17 +30,18 @@ python create_annotation_for_yolo.py --input_imgs_path <path_to_input_data> --in
 ```
 Then organize your data dir as follows to fit the training yaml:
 data
---images
-----train
-----val
---labels
-----train
-----val
+--images \
+----train \
+----val \
+--labels \
+----train \
+----val \
 
 ## Training
 
 1. To train the model(s) in the paper, run this command:
-
+cell.yaml is provided
+download yolov5s6.pt from https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5s.pt
 ```bash
 python train.py --img 1280 --batch 8 --epochs 50 --data ./cell.yaml --weights yolov5s6.pt --multi-scale --seed 42 --name fold_1
 ```
