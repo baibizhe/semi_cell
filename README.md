@@ -87,6 +87,8 @@ python custom_det.py --img 1280 --source patched_cache --weights runs/fold_4.pt 
 docker container run --gpus "device=0" -m 28G --name algorithm --rm -v $PWD/CellSeg_Test/:/workspace/inputs/ -v $PWD/algorithm_results/:/workspace/outputs/ algorithm:latest /bin/bash -c "sh predict.sh"
 ```
 
+A Jupyternote book for inference
+https://colab.research.google.com/drive/1hrsotfDiyyWpdlWIY2JpkzNLjURE5joG?usp=sharing
 ## Results
 
 Our method achieves the following performance on [Brain Tumor Segmentation (BraTS) Challenge](https://www.med.upenn.edu/cbica/brats2020/)
