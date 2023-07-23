@@ -38,8 +38,12 @@ data \
 ## Training
 
 1. To train the model(s) in the paper, run this command:
+
 cell.yaml is provided
+
 download yolov5s6.pt from https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5s.pt
+
+Then run 
 ```bash
 python train.py --img 1280 --batch 8 --epochs 50 --data ./cell.yaml --weights yolov5s6.pt --multi-scale --seed 42 --name fold_1
 ```
