@@ -49,9 +49,13 @@ python train.py --img 1280 --batch 8 --epochs 50 --data ./cell.yaml --weights yo
 
 You can download trained models here:  
 https://drive.google.com/file/d/1ty6jXk-ZnuA4f23ZvlLTvRdWhVY8-JM3/view?usp=drive_link
+
 https://drive.google.com/file/d/1p42Wm1zEHprFeDW8KxgYJa7PYsGnL4GZ/view?usp=drive_link
+
 https://drive.google.com/file/d/1NkbHfEZWdMAZBR8toWk4Nvf_c3srd-Cn/view?usp=drive_link
+
 https://drive.google.com/file/d/1n7o7dvIygyI-JjECKRwW2hkl4puitWvp/view?usp=drive_link
+
 https://drive.google.com/file/d/1D2Ynk9loeJZHAKjS351na7f-6wrIetjh/view?usp=drive_link
 
 
