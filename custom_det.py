@@ -26,7 +26,6 @@ Usage - formats:
 """
 import  time
 t0 = time.time()
-from pynvml import *
 import torch
 
 import argparse
@@ -359,7 +358,6 @@ def main(opt):
 
 if __name__ == "__main__":
     t0fix = time.time()
-    nvmlInit()
     import cProfile
 
     pr = cProfile.Profile()
@@ -517,12 +515,7 @@ if __name__ == "__main__":
         t0 = time.time()
 
     print("total time is ",time.time() - t0fix)
-    h = nvmlDeviceGetHandleByIndex(0)
 
-    info = nvmlDeviceGetMemoryInfo(h)
-    print(f'total    : {info.total}')
-    print(f'free     : {info.free}')
-    print(f'used     : {info.used}')
     pr.disable()
     # after your program ends
     pr.print_stats(sort="cumtime")
