@@ -443,7 +443,7 @@ if __name__ == "__main__":
     in_channels=3)
 
     model.to('cuda')
-    model.load_state_dict(torch.load('fold-0.bin'))
+    model.load_state_dict(torch.load('seg_fold-0.bin'))
     model.eval()
     print('Seg Weithts Loaded.')
 
