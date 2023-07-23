@@ -10,10 +10,12 @@ To install requirements:
 ```setup
 pip install -r requirements.txt
 ```
+# TODO
+DATASET
+upload the docker container to docker hub and put the link on the github page
+ provide a jupyter notebook for inference on colab
 
-
-
-## Dataset TODO
+## Dataset 
 
 - A link to download the data (if publicly available)
 - A description of how to prepare the data (e.g., folder structures) 
@@ -72,7 +74,7 @@ python train.py --img 1280 --batch 8 --epochs 50 --data ./youdata.yaml --weights
 
 
 
-## Inference
+## Inference  
 
 1. To infer the testing cases, run this command:
 
