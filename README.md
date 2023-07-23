@@ -56,7 +56,7 @@ https://drive.google.com/file/d/1D2Ynk9loeJZHAKjS351na7f-6wrIetjh/view?usp=drive
 
 
 2. To fine-tune the model on a customized dataset, run this command:
-first preprrcessing data,
+first preprocessing data,
 ```python
 python create_annotation_for_yolo.py --input_imgs_path <path_to_input_data> --input_masks_path <path_to_input_data> --output_path <path_to_output_data>
 ```
@@ -76,27 +76,10 @@ python train.py --img 1280 --batch 8 --epochs 50 --data ./youdata.yaml --weights
 python custom_det.py --img 1280 --source patched_cache --weights runs/fold_4.pt runs/fold_3.pt runs/fold_2.pt runs/fold_1.pt runs/fold_0.pt --name testa --max-det 20000 --half --iou-thres 0.5 --conf-thres=0.4 --save-txt --save-conf --line-thickness 1 --hide-labels --project patched_cache/detect --nosave
 ```
 
-> Describe how to infer testing cases with the trained models.
-
-2. [Colab](https://colab.research.google.com/) jupyter notebook
-
-3. Docker containers on [DockerHub](https://hub.docker.com/)
 
 ```bash
 docker container run --gpus "device=0" -m 28G --name algorithm --rm -v $PWD/CellSeg_Test/:/workspace/inputs/ -v $PWD/algorithm_results/:/workspace/outputs/ algorithm:latest /bin/bash -c "sh predict.sh"
 ```
-
-## Evaluation
-
-To compute the evaluation metrics, run:
-
-```eval
-python eval.py --seg_data <path_to_inference_results> --gt_data <path_to_ground_truth>
-```
-
->Describe how to evaluate the inference results and obtain the reported results in the paper.
-
-
 
 ## Results
 
