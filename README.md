@@ -87,24 +87,11 @@ python custom_det.py --img 1280 --source patched_cache --weights runs/fold_4.pt 
 docker container run --gpus "device=0" -m 28G --name algorithm --rm -v $PWD/CellSeg_Test/:/workspace/inputs/ -v $PWD/algorithm_results/:/workspace/outputs/ algorithm:latest /bin/bash -c "sh predict.sh"
 ```
 
-A Jupyternote book for inference
-https://colab.research.google.com/drive/1hrsotfDiyyWpdlWIY2JpkzNLjURE5joG?usp=sharing
-## Results
 
-Our method achieves the following performance on [Brain Tumor Segmentation (BraTS) Challenge](https://www.med.upenn.edu/cbica/brats2020/)
 
-| Model name       |  DICE  | 95% Hausdorff Distance |
-| ---------------- | :----: | :--------------------: |
-| My awesome model | 90.68% |         32.71          |
+2. [Colab]([https://colab.research.google.com/](https://colab.research.google.com/drive/1hrsotfDiyyWpdlWIY2JpkzNLjURE5joG?usp=sharing)) jupyter notebook
 
->Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+3. Docker containers on [DockerHub]([https://hub.docker.com](https://hub.docker.com/r/baibizhe/overoverfitting)/)
 
 
 
-
-
-### inference
-
-```
-python custom_det.py --img 1280 --source patched_cache --weights runs/fold_4.pt runs/fold_3.pt runs/fold_2.pt runs/fold_1.pt runs/fold_0.pt --name testa --max-det 20000 --half --iou-thres 0.5 --conf-thres=0.4 --save-txt --save-conf --line-thickness 1 --hide-labels --project patched_cache/detect --nosave
-```
