@@ -59,8 +59,7 @@ import shutil
 #from tqdm import tqdm
 import numpy as np
 
-print("import takes:", time.time() - t0)
-t0 = time.time()
+
 
 @smart_inference_mode()
 def run(
@@ -378,7 +377,6 @@ if __name__ == "__main__":
         shutil.rmtree('./patched_cache/', ignore_errors=True)
         os.makedirs('./patched_cache')
     print('Patching...')
-    t0 = time.time()
     for img_path in all_images:
         
         img = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)
@@ -414,8 +412,6 @@ if __name__ == "__main__":
         else:
             cv2.imwrite('{}${}.png'.format('patched_cache'+os.path.sep+img_path.split(os.path.sep)[-1].split('.')[0], 0), img)
     
-    print("patching takes:",time.time()-t0)
-    t0 = time.time()
 
     print('YOLO Inferencing...')
     #yolov5
@@ -431,8 +427,6 @@ if __name__ == "__main__":
                 A.Normalize(mean, std),
         ]),
     }
-    print("yolo boxes takes:",time.time()-t0)
-    t0 = time.time()
 
     model = TimmSED(
     base_model_name="efficientnet-b0",
@@ -494,8 +488,6 @@ if __name__ == "__main__":
                 if min((xmax-xmin)*shape[1], (ymax-ymin)*shape[0]) > 2:
                     boxes.append([xmin, ymin, xmax, ymax])
                     confs.append(conf)
-        print("weighted_boxes_fusion  takes:", time.time() - t0)
-        t0 = time.time()
 
         base = np.zeros((shape[0], shape[1]), dtype='uint16')
         if boxes is not None:
@@ -511,10 +503,7 @@ if __name__ == "__main__":
                 cell_count+=1
         img_output_path = os.path.join(output_path, '{}_label.tiff'.format(img_path.split(os.path.sep)[-1].split('.')[0].replace("_label",'')))
         tif.imwrite(img_output_path, base, compression='zlib')
-        print("imwrite  takes:", time.time() - t0)
-        t0 = time.time()
 
-    print("total time is ",time.time() - t0fix)
 
     pr.disable()
     # after your program ends
