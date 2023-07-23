@@ -12,17 +12,13 @@ pip install -r requirements.txt
 ```
 # TODO
 DATASET
-upload the docker container to docker hub and put the link on the github page
- provide a jupyter notebook for inference on colab
 
 ## Dataset 
 
-- A link to download the data (if publicly available)
-- A description of how to prepare the data (e.g., folder structures) 
+- Download data from https://neurips22-cellseg.grand-challenge.org/dataset/
+-  folder structures  will be describe in preprocessing section
 
 ## Preprocessing
-
-
 
 
 Running the data preprocessing code:
