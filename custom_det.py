@@ -356,11 +356,6 @@ def main(opt):
 
 
 if __name__ == "__main__":
-    t0fix = time.time()
-    import cProfile
-
-    pr = cProfile.Profile()
-    pr.enable()
 
     opt = parse_opt()
     img_list = []
@@ -505,6 +500,3 @@ if __name__ == "__main__":
         tif.imwrite(img_output_path, base, compression='zlib')
 
 
-    pr.disable()
-    # after your program ends
-    pr.print_stats(sort="cumtime")
