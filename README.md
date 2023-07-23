@@ -89,8 +89,8 @@ docker container run --gpus "device=0" -m 28G --name algorithm --rm -v $PWD/Cell
 
 
 2. [Colab]([https://colab.research.google.com/](https://colab.research.google.com/drive/1hrsotfDiyyWpdlWIY2JpkzNLjURE5joG?usp=sharing)) jupyter notebook
-
+https://colab.research.google.com/drive/1hrsotfDiyyWpdlWIY2JpkzNLjURE5joG?usp=sharing
 3. Docker containers on [DockerHub]([https://hub.docker.com](https://hub.docker.com/r/baibizhe/overoverfitting)/)
-
+https://hub.docker.com/r/baibizhe/overoverfitting
 
 
