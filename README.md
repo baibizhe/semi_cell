@@ -47,15 +47,22 @@ download yolov5s6.pt from https://github.com/ultralytics/yolov5/releases/downloa
 python train.py --img 1280 --batch 8 --epochs 50 --data ./cell.yaml --weights yolov5s6.pt --multi-scale --seed 42 --name fold_1
 ```
 
-You can download trained models here:  TODO
-
-
+You can download trained models here:  
+https://drive.google.com/file/d/1ty6jXk-ZnuA4f23ZvlLTvRdWhVY8-JM3/view?usp=drive_link
+https://drive.google.com/file/d/1p42Wm1zEHprFeDW8KxgYJa7PYsGnL4GZ/view?usp=drive_link
+https://drive.google.com/file/d/1NkbHfEZWdMAZBR8toWk4Nvf_c3srd-Cn/view?usp=drive_link
+https://drive.google.com/file/d/1n7o7dvIygyI-JjECKRwW2hkl4puitWvp/view?usp=drive_link
+https://drive.google.com/file/d/1D2Ynk9loeJZHAKjS351na7f-6wrIetjh/view?usp=drive_link
 
 
 2. To fine-tune the model on a customized dataset, run this command:
-
+first preprrcessing data,
+```python
+python create_annotation_for_yolo.py --input_imgs_path <path_to_input_data> --input_masks_path <path_to_input_data> --output_path <path_to_output_data>
+```
+then train the model
 ```bash
-python finetune.py --input-data <path_to_data> --pre_trained_model_path <path to pre-trained model> --other_flags
+python train.py --img 1280 --batch 8 --epochs 50 --data ./youdata.yaml --weights yolov5s6.pt --multi-scale --seed 42 --name your_run_name
 ```
 
 
@@ -66,7 +73,7 @@ python finetune.py --input-data <path_to_data> --pre_trained_model_path <path to
 1. To infer the testing cases, run this command:
 
 ```python
-python inference.py --input-data <path_to_data> --model_path <path_to_trained_model> --output_path <path_to_output_data>
+python custom_det.py --img 1280 --source patched_cache --weights runs/fold_4.pt runs/fold_3.pt runs/fold_2.pt runs/fold_1.pt runs/fold_0.pt --name testa --max-det 20000 --half --iou-thres 0.5 --conf-thres=0.4 --save-txt --save-conf --line-thickness 1 --hide-labels --project patched_cache/detect --nosave
 ```
 
 > Describe how to infer testing cases with the trained models.
