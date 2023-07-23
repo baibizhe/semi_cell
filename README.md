@@ -29,6 +29,7 @@ Running the data preprocessing code:
 python create_annotation_for_yolo.py --input_imgs_path <path_to_input_data> --input_masks_path <path_to_input_data> --output_path <path_to_output_data>
 ```
 Then organize your data dir as follows to fit the training yaml:
+
 data \
 --images \
 ----train \
